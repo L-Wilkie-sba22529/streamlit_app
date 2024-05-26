@@ -1,0 +1,6 @@
+streamlit
+PIL
+pandas
+io
+ast
+numpy

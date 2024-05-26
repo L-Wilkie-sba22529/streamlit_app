@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 from io import BytesIO
-from streamlit_clickable_images import clickable_images
 import ast
 import numpy as np
 
@@ -287,10 +286,8 @@ def get_recent_recommendations():
 def display_game_thumbnail(game_id, game_url, game_title, game_price, game_desc):
     st.markdown(
         f"""
-        <div style="cursor:pointer;">
-            <a href="/?selected_game={game_id}" target="_self">
-                <img src="{game_url}" alt="Game ID: {game_id}" width="90%">
-            </a>
+        <div style="cursor:default;">
+            <img src="{game_url}" alt="Game ID: {game_id}" width="90%">
         </div>
         """,
         unsafe_allow_html=True
